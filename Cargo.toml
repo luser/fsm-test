@@ -1,0 +1,8 @@
+[package]
+name = "fsm-test"
+version = "0.1.0"
+authors = ["Ted Mielczarek <ted@mielczarek.org>"]
+edition = "2018"
+
+[dependencies]
+libc = "0.2.73"
