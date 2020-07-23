@@ -6,7 +6,7 @@ mod fsm;
 fn main() -> io::Result<()> {
     let stdin = io::stdin();
     for line in stdin.lock().lines() {
-        let cs = CString::new(line?.as_bytes()).unwrap();
+        let cs = CString::new(line?).unwrap();
         if unsafe { fsm::fsm_main(cs.as_ptr()) } > 1 {
             println!("Matched!");
         } else {
